@@ -3,10 +3,11 @@
 // ============================================================
 import axios from "axios";
 
-const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
+// This will use the environment variable if present, otherwise fallback to your Railway URL
+const BASE_URL = import.meta.env.VITE_API_URL || "https://ecommerce-project-production-f69a.up.railway.app";
 
 const api = axios.create({
-  baseURL: BASE_URL,
+  baseURL: BASE_URL, // Use the variable here!
   headers: { "Content-Type": "application/json" },
 });
 
